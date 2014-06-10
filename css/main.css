@@ -1,0 +1,67 @@
+
+body {
+  background-color: black;
+}
+.main {
+
+  margin-top: 110px;
+  padding-left: 100px;
+  max-width: 1191px;
+  height: 550px;
+  background-image: url('http://th01.deviantart.net/fs71/PRE/f/2013/313/7/a/stage_four___certain_air_force_base_by_webcat-d6tl79w.jpg');
+  background-repeat: no-repeat;
+}
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  width: 659px;
+  height: 494px;
+  margin-top: 75px; 
+}
+.ryu-ready, .ryu-throwing, .ryu-cool {
+  display: none;
+} 
+.ryu-ready {
+  background-image: url('../images/ryu-ready-position.gif');
+}
+.ryu-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+.ryu-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+	}
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
+  background-repeat: no-repeat;
+}
+.hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  display: none;
+  float: left;
+  position: relative;
+  top: 237px;
+  left: -212px;
+} 
+
+.ryu {
+  float: left;
+}
+
+.how-to {
+	color: white;
+	float: right;
+	position: relative;
+	top: -550px;
+	text-shadow: 2px 2px black;
+	font-family: Arial;
+	font-size: 35px;
+	width: 600px;
+	}
+
+.logo {
+	background-image: url('../images/sf-logo2.png');
+	float: left;
+	
+	}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Street Fighter</title>
+	<!--CSS Stylesheets-->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+	<!--JQuery-->
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="js/app.js"></script>
+			<script>
+				$(document).ready(function() {
+					$('.ryu').mouseenter(function() {
+						$('.ryu-still').hide();
+						$('.ryu-ready').show();
+						})
+						.mouseleave(function() {
+							$('.ryu-ready').hide();
+							$('.ryu-still').show();
+						})
+						.mousedown(function() {
+							playHadouken(); 
+							$('.ryu-ready').hide();
+							$('.ryu-throwing').show();
+							$('.hadouken').finish().show().animate({'left': '300px'},500,function() {
+								$(this).hide();
+								$(this).css('left', '-212px');
+							   });
+						 })
+						.mouseup(function() {
+							$('.ryu-throwing').hide();
+							$('.ryu-ready').show();
+						 });
+					$(document).keydown(function() {
+						if ( event.which == 88 ) {
+							$('.ryu-ready').hide();
+							$('.ryu-still').hide();
+							$('.ryu-cool').show();
+							}
+					}).keyup(function() {
+						$('.ryu-cool').hide();
+						$('.ryu-still').show();
+						$('.ryu-ready').hide();
+					});
+				});
+				function playHadouken () {
+					$('#hadouken-sound')[0].volume = 0.5;
+					 $('#hadouken-sound')[0].load();
+					 $('#hadouken-sound')[0].play();
+					}
+			</script>
+</head>
+<body>
+	<!--Ryu-->
+	<div class="main">
+		<div class="ryu">
+		  <div class="ryu-still"></div>
+		  <div class="ryu-ready"></div>
+		  <div class="ryu-throwing"></div>
+		  <div class="ryu-cool"></div>
+		</div>
+		<!--Special Move-->
+		<div class="hadouken"></div>
+	</div>
+	<!--Copy-->
+	<div class="how-to">
+				<p>Click on Ryu to make him throw a Hadouken.</p>
+				</br>
+				<p>Press and hold down the "x" key to make him strike his cool pose!</p> 
+	</div>
+	<div class="logo">
+		<img src="../images/sf-logo2.png">
+	</div>
+	<!--Audio-->
+	<audio id="hadouken-sound" src="sound/hadouken.mp3">
+</body>
+</html>
